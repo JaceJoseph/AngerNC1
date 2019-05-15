@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eSX-3c-klR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -18,75 +18,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fis-s9-DZg">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fis-s9-DZg" customClass="Particle_View" customModule="AngerTracker" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AWM-LA-hc1">
-                                        <rect key="frame" x="0.0" y="58" width="414" height="779"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="beginner-first-app" translatesAutoresizingMaskIntoConstraints="NO" id="ANm-M8-Xyo">
-                                                <rect key="frame" x="78" y="0.0" width="258" height="221"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="4a5-4t-jWq">
-                                                <rect key="frame" x="109" y="375" width="299" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="tintColor" red="0.96008486680000005" green="0.96008486680000005" blue="0.96008486680000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <color key="maximumTrackTintColor" red="0.75764882564544678" green="0.084136910736560822" blue="0.11433085054159164" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </slider>
-                                            <slider opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="0Vj-8n-q2I">
-                                                <rect key="frame" x="109" y="486" width="299" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="tintColor" red="0.96008486680000005" green="0.96008486680000005" blue="0.96008486680000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <color key="maximumTrackTintColor" red="0.75764882564544678" green="0.084136910736560822" blue="0.11433085054159164" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </slider>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ss-delegates" translatesAutoresizingMaskIntoConstraints="NO" id="WGO-gl-MY6">
-                                                <rect key="frame" x="19" y="353" width="72" height="72"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="int-overview" translatesAutoresizingMaskIntoConstraints="NO" id="RoM-0W-wbJ">
-                                                <rect key="frame" x="19" y="292" width="72" height="72"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <slider opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="PtN-Nx-lkI">
-                                                <rect key="frame" x="109" y="314" width="299" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="tintColor" red="0.96008486680000005" green="0.96008486680000005" blue="0.96008486680000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <color key="maximumTrackTintColor" red="0.75764882564544678" green="0.084136910736560822" blue="0.11433085054159164" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </slider>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ss-uipickerview-card" translatesAutoresizingMaskIntoConstraints="NO" id="prR-6b-6zh">
-                                                <rect key="frame" x="19" y="406" width="72" height="72"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vlog-4" translatesAutoresizingMaskIntoConstraints="NO" id="OGt-C0-xIs">
-                                                <rect key="frame" x="19" y="464" width="72" height="72"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dev-setup" translatesAutoresizingMaskIntoConstraints="NO" id="J9A-i7-sV5">
-                                                <rect key="frame" x="19" y="229" width="72" height="72"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <slider opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Bh7-68-Ynl">
-                                                <rect key="frame" x="109" y="251" width="299" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="tintColor" red="0.96008486680000005" green="0.96008486680000005" blue="0.96008486680000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <color key="maximumTrackTintColor" red="0.75764882564544678" green="0.084136910736560822" blue="0.11433085054159164" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </slider>
-                                            <slider opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Yiz-Mw-D2r">
-                                                <rect key="frame" x="109" y="428" width="299" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="tintColor" red="0.96008486680000005" green="0.96008486680000005" blue="0.96008486680000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <color key="maximumTrackTintColor" red="0.75764882564544678" green="0.084136910736560822" blue="0.11433085054159164" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </slider>
-                                        </subviews>
-                                    </view>
-                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ss-delegates" translatesAutoresizingMaskIntoConstraints="NO" id="WGO-gl-MY6">
+                                <rect key="frame" x="20" y="579" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="int-overview" translatesAutoresizingMaskIntoConstraints="NO" id="RoM-0W-wbJ">
+                                <rect key="frame" x="20" y="527" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <slider opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="PtN-Nx-lkI" customClass="MyCustomSlider" customModule="AngerTracker" customModuleProvider="target">
+                                <rect key="frame" x="104" y="499" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.96008486680000005" green="0.96008486680000005" blue="0.96008486680000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="maximumTrackTintColor" red="0.75764882564544678" green="0.084136910736560822" blue="0.11433085054159164" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </slider>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ss-uipickerview-card" translatesAutoresizingMaskIntoConstraints="NO" id="prR-6b-6zh">
+                                <rect key="frame" x="20" y="632" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vlog-4" translatesAutoresizingMaskIntoConstraints="NO" id="OGt-C0-xIs">
+                                <rect key="frame" x="20" y="679" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dev-setup" translatesAutoresizingMaskIntoConstraints="NO" id="J9A-i7-sV5">
+                                <rect key="frame" x="20" y="468" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <slider opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Bh7-68-Ynl" customClass="MyCustomSlider" customModule="AngerTracker" customModuleProvider="target">
+                                <rect key="frame" x="104" y="610" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.96008486680000005" green="0.96008486680000005" blue="0.96008486680000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="maximumTrackTintColor" red="0.75764882564544678" green="0.084136910736560822" blue="0.11433085054159164" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </slider>
+                            <slider opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Yiz-Mw-D2r" customClass="MyCustomSlider" customModule="AngerTracker" customModuleProvider="target">
+                                <rect key="frame" x="104" y="663" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.96008486680000005" green="0.96008486680000005" blue="0.96008486680000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="maximumTrackTintColor" red="0.75764882564544678" green="0.084136910736560822" blue="0.11433085054159164" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </slider>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="beginner-first-app" translatesAutoresizingMaskIntoConstraints="NO" id="ANm-M8-Xyo">
+                                <rect key="frame" x="32" y="96" width="350" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="4a5-4t-jWq" customClass="MyCustomSlider" customModule="AngerTracker" customModuleProvider="target">
+                                <rect key="frame" x="104" y="558" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.96008486680000005" green="0.96008486680000005" blue="0.96008486680000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="maximumTrackTintColor" red="0.75764882564544678" green="0.084136910736560822" blue="0.11433085054159164" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </slider>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sud-T1-d5E">
-                                <rect key="frame" x="162" y="700" width="90" height="53"/>
+                                <rect key="frame" x="162" y="765" width="90" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -95,6 +81,12 @@
                                     <action selector="pushedAddEmotionRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eoe-TM-hDg"/>
                                 </connections>
                             </button>
+                            <slider opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="0Vj-8n-q2I" customClass="MyCustomSlider" customModule="AngerTracker" customModuleProvider="target">
+                                <rect key="frame" x="104" y="710" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.96008486680000005" green="0.96008486680000005" blue="0.96008486680000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="maximumTrackTintColor" red="0.75764882564544678" green="0.084136910736560822" blue="0.11433085054159164" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -107,12 +99,12 @@
                         <outlet property="sliderLevel4" destination="Yiz-Mw-D2r" id="0px-Hc-3Vk"/>
                         <outlet property="sliderLevel5" destination="0Vj-8n-q2I" id="A4E-gz-98W"/>
                         <outlet property="sliderLevell2" destination="PtN-Nx-lkI" id="W5R-6y-TZg"/>
-                        <outlet property="viewSK" destination="fis-s9-DZg" id="tmb-0l-bLp"/>
-                        <outletCollection property="emotionChart" destination="4a5-4t-jWq" collectionClass="NSMutableArray" id="AaA-Re-38I"/>
+                        <outlet property="viewSK" destination="fis-s9-DZg" id="y0u-Ya-Kzs"/>
                         <outletCollection property="emotionChart" destination="0Vj-8n-q2I" collectionClass="NSMutableArray" id="maG-1Q-d1E"/>
-                        <outletCollection property="emotionChart" destination="Bh7-68-Ynl" collectionClass="NSMutableArray" id="3bq-ca-dft"/>
                         <outletCollection property="emotionChart" destination="PtN-Nx-lkI" collectionClass="NSMutableArray" id="6lx-vV-ygL"/>
+                        <outletCollection property="emotionChart" destination="Bh7-68-Ynl" collectionClass="NSMutableArray" id="3bq-ca-dft"/>
                         <outletCollection property="emotionChart" destination="Yiz-Mw-D2r" collectionClass="NSMutableArray" id="ar4-ai-zlW"/>
+                        <outletCollection property="emotionChart" destination="4a5-4t-jWq" collectionClass="NSMutableArray" id="AaA-Re-38I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -127,12 +119,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dev-setup" translatesAutoresizingMaskIntoConstraints="NO" id="s3p-wX-SR7">
-                                <rect key="frame" x="87" y="157" width="240" height="227"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9UG-SQ-Rgj" customClass="Particle_View" customModule="AngerTracker" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dev-setup" translatesAutoresizingMaskIntoConstraints="NO" id="s3p-wX-SR7">
+                                <rect key="frame" x="32" y="97" width="350" height="300"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="OIj-Vy-Pdf">
-                                <rect key="frame" x="20" y="460" width="376" height="30"/>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="OIj-Vy-Pdf" customClass="MyCustomSlider" customModule="AngerTracker" customModuleProvider="target">
+                                <rect key="frame" x="30" y="542" width="354" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="maximumTrackTintColor" red="0.75764882564544678" green="0.084136910736560822" blue="0.11433085054159164" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -141,7 +138,7 @@
                                 </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uxb-kJ-hM6">
-                                <rect key="frame" x="118" y="628" width="169" height="71"/>
+                                <rect key="frame" x="123" y="744" width="169" height="71"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
@@ -155,6 +152,7 @@
                     <connections>
                         <outlet property="emotionImage" destination="s3p-wX-SR7" id="4dm-9D-zeP"/>
                         <outlet property="emotionValue" destination="OIj-Vy-Pdf" id="iNy-Ri-zIc"/>
+                        <outlet property="particleView" destination="9UG-SQ-Rgj" id="5KE-5K-Ohh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Smm-u4-sFi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -210,25 +208,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wR2-YW-TFt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="850.72463768115949" y="831.69642857142856"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="ag2-Jw-IYe">
-            <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="eSX-3c-klR" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4rX-gP-mEk">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="5Oo-jy-iAm"/>
-                        <segue destination="3dd-Mt-NNj" kind="relationship" relationship="viewControllers" id="xRk-sn-Jte"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lzJ-i7-Gha" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-57.971014492753625" y="117.85714285714285"/>
         </scene>
     </scenes>
     <resources>

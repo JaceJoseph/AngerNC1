@@ -15,12 +15,15 @@ import UIKit
 class AddEmotionRecordViewController: UIViewController {
     
     var submitEmotionDelegate:submitEmotion!
+
+    @IBOutlet weak var particleView: Particle_View!
+    
     @IBOutlet weak var emotionValue: UISlider!
     @IBOutlet weak var emotionImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = backgroundColor
+        particleView.setupView(value: meanData)
         // Do any additional setup after loading the view.
     }
     
@@ -34,6 +37,7 @@ class AddEmotionRecordViewController: UIViewController {
         NotificationCenter.default.post(name: appendKey, object: nil, userInfo: ["key":UserEmotionData(emotionImage: desiredImage!, value: desiredValue)])
         
         dismiss(animated: true, completion: nil)
+
     }
     
     @IBAction func sliderValueChange(_ sender: UISlider) {

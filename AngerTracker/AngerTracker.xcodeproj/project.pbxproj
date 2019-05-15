@@ -18,6 +18,13 @@
 		70A7708D228AB19300A08A99 /* AngerRecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A7708C228AB19300A08A99 /* AngerRecordsViewController.swift */; };
 		70A7708F228AB24200A08A99 /* AngerRecordCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A7708E228AB24200A08A99 /* AngerRecordCollectionViewCell.swift */; };
 		70A770E1228BBE8E00A08A99 /* MyParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 70A770E0228BBE8E00A08A99 /* MyParticle.sks */; };
+		70A770E7228C1FD500A08A99 /* MyCustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A770E6228C1FD500A08A99 /* MyCustomSlider.swift */; };
+		70A770E9228C226800A08A99 /* Particle View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A770E8228C226800A08A99 /* Particle View.swift */; };
+		70A770EB228C269900A08A99 /* MyParticle2.sks in Resources */ = {isa = PBXBuildFile; fileRef = 70A770EA228C269900A08A99 /* MyParticle2.sks */; };
+		70A770F3228C289D00A08A99 /* MyParticle3.sks in Resources */ = {isa = PBXBuildFile; fileRef = 70A770F1228C289D00A08A99 /* MyParticle3.sks */; };
+		70A770F4228C289D00A08A99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70A770F2228C289D00A08A99 /* Assets.xcassets */; };
+		70A770F6228C296700A08A99 /* MyParticle4.sks in Resources */ = {isa = PBXBuildFile; fileRef = 70A770F5228C296700A08A99 /* MyParticle4.sks */; };
+		70A770F8228C2A0500A08A99 /* MyParticle5.sks in Resources */ = {isa = PBXBuildFile; fileRef = 70A770F7228C2A0500A08A99 /* MyParticle5.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +41,13 @@
 		70A7708C228AB19300A08A99 /* AngerRecordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AngerRecordsViewController.swift; sourceTree = "<group>"; };
 		70A7708E228AB24200A08A99 /* AngerRecordCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AngerRecordCollectionViewCell.swift; sourceTree = "<group>"; };
 		70A770E0228BBE8E00A08A99 /* MyParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyParticle.sks; sourceTree = "<group>"; };
+		70A770E6228C1FD500A08A99 /* MyCustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomSlider.swift; sourceTree = "<group>"; };
+		70A770E8228C226800A08A99 /* Particle View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Particle View.swift"; sourceTree = "<group>"; };
+		70A770EA228C269900A08A99 /* MyParticle2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyParticle2.sks; sourceTree = "<group>"; };
+		70A770F1228C289D00A08A99 /* MyParticle3.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyParticle3.sks; sourceTree = "<group>"; };
+		70A770F2228C289D00A08A99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		70A770F5228C296700A08A99 /* MyParticle4.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyParticle4.sks; sourceTree = "<group>"; };
+		70A770F7228C2A0500A08A99 /* MyParticle5.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyParticle5.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +64,11 @@
 		70A77068228A9CFC00A08A99 = {
 			isa = PBXGroup;
 			children = (
+				70A77080228A9CFF00A08A99 /* Info.plist */,
 				70A77073228A9CFC00A08A99 /* AngerTracker */,
+				70A7707B228A9CFF00A08A99 /* Assets.xcassets */,
+				70A7707D228A9CFF00A08A99 /* LaunchScreen.storyboard */,
+				70A77074228A9CFC00A08A99 /* AppDelegate.swift */,
 				70A77072228A9CFC00A08A99 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -66,20 +84,63 @@
 		70A77073228A9CFC00A08A99 /* AngerTracker */ = {
 			isa = PBXGroup;
 			children = (
-				70A77074228A9CFC00A08A99 /* AppDelegate.swift */,
 				70A77076228A9CFC00A08A99 /* ViewController.swift */,
 				70A77078228A9CFC00A08A99 /* Main.storyboard */,
-				70A7707B228A9CFF00A08A99 /* Assets.xcassets */,
-				70A7707D228A9CFF00A08A99 /* LaunchScreen.storyboard */,
-				70A77080228A9CFF00A08A99 /* Info.plist */,
-				70A77086228AA30D00A08A99 /* EmotionData.swift */,
-				70A77088228AA42900A08A99 /* UserEmotionData.swift */,
-				70A7708A228AA50B00A08A99 /* AddEmotionRecordViewController.swift */,
-				70A7708C228AB19300A08A99 /* AngerRecordsViewController.swift */,
-				70A7708E228AB24200A08A99 /* AngerRecordCollectionViewCell.swift */,
-				70A770E0228BBE8E00A08A99 /* MyParticle.sks */,
+				70A770F0228C272200A08A99 /* Datas */,
+				70A770EF228C271200A08A99 /* Add Record */,
+				70A770ED228C26AC00A08A99 /* UI Subclasses */,
+				70A770EC228C26A000A08A99 /* SKS Files */,
+				70A770EE228C26CB00A08A99 /* Records Screen */,
 			);
 			path = AngerTracker;
+			sourceTree = "<group>";
+		};
+		70A770EC228C26A000A08A99 /* SKS Files */ = {
+			isa = PBXGroup;
+			children = (
+				70A770E0228BBE8E00A08A99 /* MyParticle.sks */,
+				70A770EA228C269900A08A99 /* MyParticle2.sks */,
+				70A770F1228C289D00A08A99 /* MyParticle3.sks */,
+				70A770F2228C289D00A08A99 /* Assets.xcassets */,
+				70A770F5228C296700A08A99 /* MyParticle4.sks */,
+				70A770F7228C2A0500A08A99 /* MyParticle5.sks */,
+			);
+			path = "SKS Files";
+			sourceTree = "<group>";
+		};
+		70A770ED228C26AC00A08A99 /* UI Subclasses */ = {
+			isa = PBXGroup;
+			children = (
+				70A770E6228C1FD500A08A99 /* MyCustomSlider.swift */,
+				70A770E8228C226800A08A99 /* Particle View.swift */,
+			);
+			path = "UI Subclasses";
+			sourceTree = "<group>";
+		};
+		70A770EE228C26CB00A08A99 /* Records Screen */ = {
+			isa = PBXGroup;
+			children = (
+				70A7708C228AB19300A08A99 /* AngerRecordsViewController.swift */,
+				70A7708E228AB24200A08A99 /* AngerRecordCollectionViewCell.swift */,
+			);
+			path = "Records Screen";
+			sourceTree = "<group>";
+		};
+		70A770EF228C271200A08A99 /* Add Record */ = {
+			isa = PBXGroup;
+			children = (
+				70A7708A228AA50B00A08A99 /* AddEmotionRecordViewController.swift */,
+			);
+			path = "Add Record";
+			sourceTree = "<group>";
+		};
+		70A770F0228C272200A08A99 /* Datas */ = {
+			isa = PBXGroup;
+			children = (
+				70A77086228AA30D00A08A99 /* EmotionData.swift */,
+				70A77088228AA42900A08A99 /* UserEmotionData.swift */,
+			);
+			path = Datas;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,9 +202,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				70A7707F228A9CFF00A08A99 /* LaunchScreen.storyboard in Resources */,
+				70A770F3228C289D00A08A99 /* MyParticle3.sks in Resources */,
 				70A7707C228A9CFF00A08A99 /* Assets.xcassets in Resources */,
 				70A7707A228A9CFC00A08A99 /* Main.storyboard in Resources */,
+				70A770F6228C296700A08A99 /* MyParticle4.sks in Resources */,
+				70A770F4228C289D00A08A99 /* Assets.xcassets in Resources */,
 				70A770E1228BBE8E00A08A99 /* MyParticle.sks in Resources */,
+				70A770F8228C2A0500A08A99 /* MyParticle5.sks in Resources */,
+				70A770EB228C269900A08A99 /* MyParticle2.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,9 +223,11 @@
 				70A77089228AA42900A08A99 /* UserEmotionData.swift in Sources */,
 				70A77077228A9CFC00A08A99 /* ViewController.swift in Sources */,
 				70A7708D228AB19300A08A99 /* AngerRecordsViewController.swift in Sources */,
+				70A770E7228C1FD500A08A99 /* MyCustomSlider.swift in Sources */,
 				70A7708F228AB24200A08A99 /* AngerRecordCollectionViewCell.swift in Sources */,
 				70A77087228AA30D00A08A99 /* EmotionData.swift in Sources */,
 				70A7708B228AA50B00A08A99 /* AddEmotionRecordViewController.swift in Sources */,
+				70A770E9228C226800A08A99 /* Particle View.swift in Sources */,
 				70A77075228A9CFC00A08A99 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,7 +375,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = AngerTracker/Info.plist;
+				DEVELOPMENT_TEAM = PM9Q92D2LG;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -324,7 +393,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = AngerTracker/Info.plist;
+				DEVELOPMENT_TEAM = PM9Q92D2LG;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

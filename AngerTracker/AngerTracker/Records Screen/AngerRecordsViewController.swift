@@ -21,7 +21,6 @@ class AngerRecordsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         createObserver()
-        self.view.backgroundColor = backgroundColor
         self.emotionCollectionView.backgroundColor = .clear
         emotionCollectionView.delegate = self
         emotionCollectionView.dataSource = self
@@ -34,7 +33,6 @@ class AngerRecordsViewController: UIViewController {
     
     @objc func updateUI(notification:NSNotification){
         emotionRecords.append(notification.userInfo?["key"] as! UserEmotionData)
-        self.emotionCollectionView.backgroundColor = backgroundColor
         emotionCollectionView.reloadData()
     }
 

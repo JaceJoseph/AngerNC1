@@ -9,11 +9,11 @@
 import UIKit
 import SpriteKit
 
-var backgroundColor:UIColor = .white
+var meanData = 0
 
 class ViewController: UIViewController {
-
-    @IBOutlet weak var viewSK: UIView!
+ 
+    @IBOutlet weak var viewSK: Particle_View!
     
     @IBOutlet weak var mainEmotionImageIndicator: UIImageView!
 
@@ -29,35 +29,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var sliderLevel4: UISlider!
     @IBOutlet weak var sliderLevel5: UISlider!
     
-    //    @IBOutlet var emotionChart: [UIProgressView]!
-    var progress = [Progress(totalUnitCount: 0),Progress(totalUnitCount: 0),Progress(totalUnitCount: 0),Progress(totalUnitCount: 0),Progress(totalUnitCount: 0)]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupSKView()
+        viewSK.setupView(value: 0)
         // Do any additional setup after loading the view.
     }
     
-    func setupSKView(){
-        let sk: SKView = SKView()
-        sk.layer.zPosition = -1
-        sk.frame = viewSK.bounds
-        sk.backgroundColor = .black
-        viewSK.addSubview(sk)
-        
-        let scene: SKScene = SKScene(size: viewSK.bounds.size)
-        scene.scaleMode = .aspectFit
-        scene.backgroundColor = .clear
-        
-        let en = SKEmitterNode(fileNamed: "MyParticle.sks")
-        en?.position = sk.center
-        
-        scene.addChild(en!)
-        sk.presentScene(scene)
-    }
-    
-   
-
     @IBAction func pushedAddEmotionRecord(_ sender: UIButton) {
         let destVC = storyboard?.instantiateViewController(withIdentifier: "AddEmotionRecord") as! AddEmotionRecordViewController
         
@@ -87,25 +64,20 @@ class ViewController: UIViewController {
         }
     }
     
-    func backgroundCalculator(value:Int)->UIColor{
+    func imageCalculator(value:Int){
         switch value {
         case 0...20:
             mainEmotionImageIndicator.image = #imageLiteral(resourceName: "dev-setup")
-            return #colorLiteral(red: 0.9956689477, green: 0.9130260348, blue: 0.1231216863, alpha: 1)
         case 21...40:
             mainEmotionImageIndicator.image = #imageLiteral(resourceName: "int-overview")
-            return #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1)
         case 41...60:
             mainEmotionImageIndicator.image = #imageLiteral(resourceName: "ss-delegates")
-            return #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
         case 61...80:
             mainEmotionImageIndicator.image = #imageLiteral(resourceName: "ss-uipickerview-card")
-            return #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
         case 81...100:
             mainEmotionImageIndicator.image = #imageLiteral(resourceName: "vlog-4")
-            return #colorLiteral(red: 0.521568656, green: 0.1098039225, blue: 0.05098039284, alpha: 1)
         default:
-            return #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            return
         }
     }
     
@@ -114,19 +86,6 @@ class ViewController: UIViewController {
             charts.maximumValue += 1
         }
     }
-    
-//    func updateChart(){
-//        for chartsProgress in progress{
-//            chartsProgress.totalUnitCount += 1
-//        }
-//
-//        var counter = 0
-//        for charts in emotionChart{
-//            charts.setProgress(Float(progress[counter].completedUnitCount)-0.01, animated: true)
-//            counter += 1
-//        }
-//    }
-    
 }
 
 extension ViewController:submitEmotion{
@@ -139,23 +98,18 @@ extension ViewController:submitEmotion{
         case 0...20:
             count[0] += 1
            sliderLevel1.value += 1
-//            self.progress[0].completedUnitCount += 1
         case 21...40:
             count[1] += 1
              sliderLevell2.value += 1
-//            self.progress[1].completedUnitCount += 1
         case 41...60:
             count[2] += 1
             sliderLevel3.value += 1
-//            self.progress[2].completedUnitCount += 1
         case 61...80:
             count[3] += 1
             sliderLevel4.value += 1
-//            self.progress[3].completedUnitCount += 1
         case 81...100:
             count[4] += 1
              sliderLevel5.value += 1
-//            self.progress[4].completedUnitCount += 1
         default:
             return
         }
@@ -164,7 +118,10 @@ extension ViewController:submitEmotion{
         let dataCount = updateCount()
         let mean = calculateMean(total: totalAngerValue, count: dataCount)
         
-        backgroundColor = backgroundCalculator(value: mean)
-        self.view.backgroundColor = backgroundCalculator(value: mean)
+        meanData = mean
+        
+        imageCalculator(value: mean)
+        
+        viewSK.setupView(value: mean)
     }
 }
