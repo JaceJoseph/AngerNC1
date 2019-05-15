@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import SpriteKit
 
 var backgroundColor:UIColor = .white
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var viewSK: UIView!
+    
     @IBOutlet weak var mainEmotionImageIndicator: UIImageView!
 
     var count = [0,0,0,0,0]
@@ -22,8 +25,27 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupSKView()
         // Do any additional setup after loading the view.
     }
+    
+    func setupSKView(){
+        let sk: SKView = SKView()
+        sk.frame = viewSK.bounds
+        sk.backgroundColor = .black
+        viewSK.addSubview(sk)
+        
+        let scene: SKScene = SKScene(size: viewSK.bounds.size)
+        scene.scaleMode = .aspectFit
+        scene.backgroundColor = .clear
+        
+        let en = SKEmitterNode(fileNamed: "MyParticle.sks")
+        en?.position = sk.center
+        
+        scene.addChild(en!)
+        sk.presentScene(scene)
+    }
+    
     func calculateMean(total:Int,count:Int)->Int{
         if count == 0{
             return 1
@@ -36,14 +58,19 @@ class ViewController: UIViewController {
     func backgroundCalculator(value:Int)->UIColor{
         switch value {
         case 0...20:
+            mainEmotionImageIndicator.image = #imageLiteral(resourceName: "dev-setup")
             return #colorLiteral(red: 0.9956689477, green: 0.9130260348, blue: 0.1231216863, alpha: 1)
         case 21...40:
+            mainEmotionImageIndicator.image = #imageLiteral(resourceName: "int-overview")
             return #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1)
         case 41...60:
+            mainEmotionImageIndicator.image = #imageLiteral(resourceName: "ss-delegates")
             return #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
         case 61...80:
+            mainEmotionImageIndicator.image = #imageLiteral(resourceName: "ss-uipickerview-card")
             return #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
         case 81...100:
+            mainEmotionImageIndicator.image = #imageLiteral(resourceName: "vlog-4")
             return #colorLiteral(red: 0.521568656, green: 0.1098039225, blue: 0.05098039284, alpha: 1)
         default:
             return #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)

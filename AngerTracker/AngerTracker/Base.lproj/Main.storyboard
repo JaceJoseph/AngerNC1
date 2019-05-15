@@ -18,6 +18,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fis-s9-DZg">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dev-setup" translatesAutoresizingMaskIntoConstraints="NO" id="J9A-i7-sV5">
                                 <rect key="frame" x="20" y="319" width="72" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -82,6 +87,7 @@
                     <tabBarItem key="tabBarItem" title="Item" id="9Q7-lH-pNi"/>
                     <connections>
                         <outlet property="mainEmotionImageIndicator" destination="ANm-M8-Xyo" id="Mf6-3c-e1n"/>
+                        <outlet property="viewSK" destination="fis-s9-DZg" id="tmb-0l-bLp"/>
                         <outletCollection property="emotionChart" destination="huM-Kl-NtN" collectionClass="NSMutableArray" id="fkv-N7-FMM"/>
                         <outletCollection property="emotionChart" destination="uLC-Pu-UME" collectionClass="NSMutableArray" id="ym2-yh-FDX"/>
                         <outletCollection property="emotionChart" destination="rPs-nC-Y89" collectionClass="NSMutableArray" id="R5u-iM-PvG"/>
