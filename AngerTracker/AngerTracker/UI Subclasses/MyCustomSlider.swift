@@ -18,7 +18,9 @@ class MyCustomSlider: UISlider {
     }
 
     override func awakeFromNib() {
-        
+        setThumbImage(#imageLiteral(resourceName: "Triangle"), for: .normal)
+        setThumbImage(#imageLiteral(resourceName: "Triangle"), for: .highlighted)
+        setThumbImage(#imageLiteral(resourceName: "Triangle"), for: .disabled)
     }
 
 }

@@ -71,22 +71,22 @@
                                 <color key="tintColor" red="0.96008486680000005" green="0.96008486680000005" blue="0.96008486680000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="maximumTrackTintColor" red="0.75764882564544678" green="0.084136910736560822" blue="0.11433085054159164" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </slider>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sud-T1-d5E">
-                                <rect key="frame" x="162" y="765" width="90" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="pushedAddEmotionRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eoe-TM-hDg"/>
-                                </connections>
-                            </button>
                             <slider opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="0Vj-8n-q2I" customClass="MyCustomSlider" customModule="AngerTracker" customModuleProvider="target">
                                 <rect key="frame" x="104" y="710" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.96008486680000005" green="0.96008486680000005" blue="0.96008486680000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="maximumTrackTintColor" red="0.75764882564544678" green="0.084136910736560822" blue="0.11433085054159164" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </slider>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sud-T1-d5E">
+                                <rect key="frame" x="162" y="750" width="90" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Group">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="pushedAddEmotionRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eoe-TM-hDg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -137,10 +137,10 @@
                                     <action selector="sliderValueChange:" destination="g2W-mG-kiF" eventType="valueChanged" id="13E-Eu-kl9"/>
                                 </connections>
                             </slider>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uxb-kJ-hM6">
-                                <rect key="frame" x="123" y="744" width="169" height="71"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uxb-kJ-hM6">
+                                <rect key="frame" x="162" y="750" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" image="Group"/>
                                 <connections>
                                     <action selector="pushedSubmitEmotion:" destination="g2W-mG-kiF" eventType="touchUpInside" id="tDy-c8-y3F"/>
                                 </connections>
@@ -211,6 +211,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Group" width="80" height="94"/>
         <image name="beginner-first-app" width="960" height="540"/>
         <image name="dev-setup" width="960" height="540"/>
         <image name="int-overview" width="960" height="540"/>
