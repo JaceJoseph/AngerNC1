@@ -19,8 +19,17 @@ class ViewController: UIViewController {
 
     var count = [0,0,0,0,0]
     var totalAngerValue = 0
+
+    @IBOutlet var emotionChart: [UISlider]!
     
-    @IBOutlet var emotionChart: [UIProgressView]!
+    //sliders
+    @IBOutlet weak var sliderLevel1: UISlider!
+    @IBOutlet weak var sliderLevell2: UISlider!
+    @IBOutlet weak var sliderLevel3: UISlider!
+    @IBOutlet weak var sliderLevel4: UISlider!
+    @IBOutlet weak var sliderLevel5: UISlider!
+    
+    //    @IBOutlet var emotionChart: [UIProgressView]!
     var progress = [Progress(totalUnitCount: 0),Progress(totalUnitCount: 0),Progress(totalUnitCount: 0),Progress(totalUnitCount: 0),Progress(totalUnitCount: 0)]
     
     override func viewDidLoad() {
@@ -31,6 +40,7 @@ class ViewController: UIViewController {
     
     func setupSKView(){
         let sk: SKView = SKView()
+        sk.layer.zPosition = -1
         sk.frame = viewSK.bounds
         sk.backgroundColor = .black
         viewSK.addSubview(sk)
@@ -44,6 +54,28 @@ class ViewController: UIViewController {
         
         scene.addChild(en!)
         sk.presentScene(scene)
+    }
+    
+   
+
+    @IBAction func pushedAddEmotionRecord(_ sender: UIButton) {
+        let destVC = storyboard?.instantiateViewController(withIdentifier: "AddEmotionRecord") as! AddEmotionRecordViewController
+        
+        destVC.submitEmotionDelegate = self
+        
+        present(destVC, animated: true, completion: nil)
+    }
+    
+    override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
+        super.dismiss(animated: flag, completion: completion)
+    }
+    
+    func updateCount()->Int{
+        var dataCount = 0
+        for numbers in count{
+            dataCount += numbers
+        }
+        return dataCount
     }
     
     func calculateMean(total:Int,count:Int)->Int{
@@ -76,38 +108,24 @@ class ViewController: UIViewController {
             return #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         }
     }
-
-    @IBAction func pushedAddEmotionRecord(_ sender: UIButton) {
-        let destVC = storyboard?.instantiateViewController(withIdentifier: "AddEmotionRecord") as! AddEmotionRecordViewController
-        
-        destVC.submitEmotionDelegate = self
-        
-        present(destVC, animated: true, completion: nil)
-    }
-    
-    override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
-        super.dismiss(animated: flag, completion: completion)
-    }
-    
-    func updateCount()->Int{
-        var dataCount = 0
-        for numbers in count{
-            dataCount += numbers
-        }
-        return dataCount
-    }
     
     func updateChart(){
-        for chartsProgress in progress{
-            chartsProgress.totalUnitCount += 1
-        }
-        
-        var counter = 0
         for charts in emotionChart{
-            charts.setProgress(Float(progress[counter].completedUnitCount)-0.01, animated: true)
-            counter += 1
+            charts.maximumValue += 1
         }
     }
+    
+//    func updateChart(){
+//        for chartsProgress in progress{
+//            chartsProgress.totalUnitCount += 1
+//        }
+//
+//        var counter = 0
+//        for charts in emotionChart{
+//            charts.setProgress(Float(progress[counter].completedUnitCount)-0.01, animated: true)
+//            counter += 1
+//        }
+//    }
     
 }
 
@@ -115,27 +133,32 @@ extension ViewController:submitEmotion{
     
     func didTapSubmitEmotion(value: Int,image:UIImage) {
         
+        updateChart()
+        
         switch value {
         case 0...20:
             count[0] += 1
-            self.progress[0].completedUnitCount += 1
+           sliderLevel1.value += 1
+//            self.progress[0].completedUnitCount += 1
         case 21...40:
             count[1] += 1
-            self.progress[1].completedUnitCount += 1
+             sliderLevell2.value += 1
+//            self.progress[1].completedUnitCount += 1
         case 41...60:
             count[2] += 1
-            self.progress[2].completedUnitCount += 1
+            sliderLevel3.value += 1
+//            self.progress[2].completedUnitCount += 1
         case 61...80:
             count[3] += 1
-            self.progress[3].completedUnitCount += 1
+            sliderLevel4.value += 1
+//            self.progress[3].completedUnitCount += 1
         case 81...100:
             count[4] += 1
-            self.progress[4].completedUnitCount += 1
+             sliderLevel5.value += 1
+//            self.progress[4].completedUnitCount += 1
         default:
             return
         }
-        
-        updateChart()
         
         totalAngerValue += value
         let dataCount = updateCount()
