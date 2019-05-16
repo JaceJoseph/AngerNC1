@@ -43,15 +43,15 @@ class AddEmotionRecordViewController: UIViewController {
     @IBAction func sliderValueChange(_ sender: UISlider) {
         switch sender.value {
         case 0...20:
-            emotionImage.image = #imageLiteral(resourceName: "dev-setup")
+            emotionImage.image = #imageLiteral(resourceName: "EmojiLevel1")
         case 21...40:
-            emotionImage.image = #imageLiteral(resourceName: "int-overview")
+            emotionImage.image = #imageLiteral(resourceName: "EmojiLevel2")
         case 41...60:
-            emotionImage.image = #imageLiteral(resourceName: "ss-delegates")
+            emotionImage.image = #imageLiteral(resourceName: "EmojiLevel3")
         case 61...80:
-            emotionImage.image = #imageLiteral(resourceName: "ss-uipickerview-card")
+            emotionImage.image = #imageLiteral(resourceName: "EmojiLevel4")
         case 81...100:
-            emotionImage.image = #imageLiteral(resourceName: "vlog-4")
+            emotionImage.image = #imageLiteral(resourceName: "EmojiLevel5")
         default:
             return
         }

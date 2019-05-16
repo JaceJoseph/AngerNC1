@@ -67,15 +67,15 @@ class ViewController: UIViewController {
     func imageCalculator(value:Int){
         switch value {
         case 0...20:
-            mainEmotionImageIndicator.image = #imageLiteral(resourceName: "dev-setup")
+            mainEmotionImageIndicator.image = #imageLiteral(resourceName: "EmojiLevel1")
         case 21...40:
-            mainEmotionImageIndicator.image = #imageLiteral(resourceName: "int-overview")
+            mainEmotionImageIndicator.image = #imageLiteral(resourceName: "EmojiLevel2S")
         case 41...60:
-            mainEmotionImageIndicator.image = #imageLiteral(resourceName: "ss-delegates")
+            mainEmotionImageIndicator.image = #imageLiteral(resourceName: "EmojiLevel3S")
         case 61...80:
-            mainEmotionImageIndicator.image = #imageLiteral(resourceName: "ss-uipickerview-card")
+            mainEmotionImageIndicator.image = #imageLiteral(resourceName: "EmojiLevel4")
         case 81...100:
-            mainEmotionImageIndicator.image = #imageLiteral(resourceName: "vlog-4")
+            mainEmotionImageIndicator.image = #imageLiteral(resourceName: "EmojiLevel5")
         default:
             return
         }
