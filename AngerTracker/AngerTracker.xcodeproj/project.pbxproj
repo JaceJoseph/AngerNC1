@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		705B21F1228EAB7100EAE16E /* MyCustomSlider2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705B21F0228EAB7100EAE16E /* MyCustomSlider2.swift */; };
 		70A77075228A9CFC00A08A99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A77074228A9CFC00A08A99 /* AppDelegate.swift */; };
 		70A77077228A9CFC00A08A99 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A77076228A9CFC00A08A99 /* ViewController.swift */; };
 		70A7707A228A9CFC00A08A99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70A77078228A9CFC00A08A99 /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		705B21F0228EAB7100EAE16E /* MyCustomSlider2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomSlider2.swift; sourceTree = "<group>"; };
 		70A77071228A9CFC00A08A99 /* AngerTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AngerTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70A77074228A9CFC00A08A99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70A77076228A9CFC00A08A99 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			children = (
 				70A770E6228C1FD500A08A99 /* MyCustomSlider.swift */,
 				70A770E8228C226800A08A99 /* Particle View.swift */,
+				705B21F0228EAB7100EAE16E /* MyCustomSlider2.swift */,
 			);
 			path = "UI Subclasses";
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				705B21F1228EAB7100EAE16E /* MyCustomSlider2.swift in Sources */,
 				70A77089228AA42900A08A99 /* UserEmotionData.swift in Sources */,
 				70A77077228A9CFC00A08A99 /* ViewController.swift in Sources */,
 				70A7708D228AB19300A08A99 /* AngerRecordsViewController.swift in Sources */,

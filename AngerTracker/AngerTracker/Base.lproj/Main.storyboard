@@ -18,68 +18,94 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fis-s9-DZg" customClass="Particle_View" customModule="AngerTracker" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fis-s9-DZg" customClass="Particle_View" customModule="AngerTracker" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="EmojiLevel3S" translatesAutoresizingMaskIntoConstraints="NO" id="WGO-gl-MY6">
-                                <rect key="frame" x="30" y="599" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="kZN-Sn-hct">
+                                <rect key="frame" x="50" y="459" width="314" height="290"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="uNV-1p-ZIi">
+                                        <rect key="frame" x="0.0" y="29" width="40" height="232"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EmojiLevel1S" translatesAutoresizingMaskIntoConstraints="NO" id="J9A-i7-sV5">
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="VL0-SW-WWJ"/>
+                                                    <constraint firstAttribute="width" constant="40" id="y7S-Hw-Jue"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EmojiLevel2S" translatesAutoresizingMaskIntoConstraints="NO" id="RoM-0W-wbJ">
+                                                <rect key="frame" x="0.0" y="48" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="0Vl-O3-iaV"/>
+                                                    <constraint firstAttribute="width" constant="40" id="lN0-eb-god"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EmojiLevel3S" translatesAutoresizingMaskIntoConstraints="NO" id="WGO-gl-MY6">
+                                                <rect key="frame" x="0.0" y="96" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="Rrn-OZ-A0h"/>
+                                                    <constraint firstAttribute="height" constant="40" id="rXG-cH-a8s"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EmojiLevel4S" translatesAutoresizingMaskIntoConstraints="NO" id="prR-6b-6zh">
+                                                <rect key="frame" x="0.0" y="144" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="LUr-Bi-Wiy"/>
+                                                    <constraint firstAttribute="width" constant="40" id="Qtd-W4-hGs"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EmojiLevel5S" translatesAutoresizingMaskIntoConstraints="NO" id="OGt-C0-xIs">
+                                                <rect key="frame" x="0.0" y="192" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="IDT-IQ-min"/>
+                                                    <constraint firstAttribute="width" constant="40" id="o58-3K-boV"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="aV4-SA-6gk">
+                                        <rect key="frame" x="76" y="0.0" width="238" height="290"/>
+                                        <subviews>
+                                            <slider opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="PtN-Nx-lkI" customClass="MyCustomSlider" customModule="AngerTracker" customModuleProvider="target">
+                                                <rect key="frame" x="-2" y="0.0" width="242" height="31"/>
+                                                <color key="tintColor" red="0.75764882564544678" green="0.084136910736560822" blue="0.11433085054159164" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="maximumTrackTintColor" red="1" green="0.63830449899999997" blue="0.27245380759999999" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </slider>
+                                            <slider opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="4a5-4t-jWq" customClass="MyCustomSlider" customModule="AngerTracker" customModuleProvider="target">
+                                                <rect key="frame" x="-2" y="65" width="242" height="31"/>
+                                                <color key="tintColor" red="0.75764882564544678" green="0.084136910736560822" blue="0.11433085054159164" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="maximumTrackTintColor" red="1" green="0.63830449899999997" blue="0.27245380759999999" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </slider>
+                                            <slider opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Bh7-68-Ynl" customClass="MyCustomSlider" customModule="AngerTracker" customModuleProvider="target">
+                                                <rect key="frame" x="-2" y="130" width="242" height="31"/>
+                                                <color key="tintColor" red="0.75764882564544678" green="0.084136910736560822" blue="0.11433085054159164" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="maximumTrackTintColor" red="1" green="0.63830449899999997" blue="0.27245380759999999" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </slider>
+                                            <slider opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Yiz-Mw-D2r" customClass="MyCustomSlider" customModule="AngerTracker" customModuleProvider="target">
+                                                <rect key="frame" x="-2" y="195" width="242" height="31"/>
+                                                <color key="tintColor" red="0.75764882564544678" green="0.084136910736560822" blue="0.11433085054159164" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="maximumTrackTintColor" red="1" green="0.63830449899999997" blue="0.27245380759999999" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </slider>
+                                            <slider opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="0Vj-8n-q2I" customClass="MyCustomSlider" customModule="AngerTracker" customModuleProvider="target">
+                                                <rect key="frame" x="-2" y="260" width="242" height="31"/>
+                                                <color key="tintColor" red="0.75764882564544678" green="0.084136910736560822" blue="0.11433085054159164" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="maximumTrackTintColor" red="1" green="0.63830449899999997" blue="0.27245380759999999" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </slider>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EmojiLevel1" translatesAutoresizingMaskIntoConstraints="NO" id="ANm-M8-Xyo">
+                                <rect key="frame" x="71" y="124" width="272" height="270"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="272" id="21O-uF-ceV"/>
+                                    <constraint firstAttribute="height" constant="270" id="FQ0-qh-Jl2"/>
+                                </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="EmojiLevel2S" translatesAutoresizingMaskIntoConstraints="NO" id="RoM-0W-wbJ">
-                                <rect key="frame" x="30" y="547" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <slider opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="PtN-Nx-lkI" customClass="MyCustomSlider" customModule="AngerTracker" customModuleProvider="target">
-                                <rect key="frame" x="104" y="499" width="280" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.75764882564544678" green="0.084136910736560822" blue="0.11433085054159164" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="maximumTrackTintColor" red="1" green="0.63830449899999997" blue="0.27245380759999999" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
-                            </slider>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="EmojiLevel4S" translatesAutoresizingMaskIntoConstraints="NO" id="prR-6b-6zh">
-                                <rect key="frame" x="30" y="660" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="EmojiLevel5S" translatesAutoresizingMaskIntoConstraints="NO" id="OGt-C0-xIs">
-                                <rect key="frame" x="30" y="720" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="EmojiLevel1S" translatesAutoresizingMaskIntoConstraints="NO" id="J9A-i7-sV5">
-                                <rect key="frame" x="30" y="480" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <slider opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Bh7-68-Ynl" customClass="MyCustomSlider" customModule="AngerTracker" customModuleProvider="target">
-                                <rect key="frame" x="104" y="615" width="280" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.75764882564544678" green="0.084136910736560822" blue="0.11433085054159164" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="maximumTrackTintColor" red="1" green="0.63830449899999997" blue="0.27245380759999999" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
-                            </slider>
-                            <slider opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Yiz-Mw-D2r" customClass="MyCustomSlider" customModule="AngerTracker" customModuleProvider="target">
-                                <rect key="frame" x="104" y="670" width="280" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.75764882564544678" green="0.084136910736560822" blue="0.11433085054159164" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="maximumTrackTintColor" red="1" green="0.63830449899999997" blue="0.27245380759999999" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
-                            </slider>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="EmojiLevel1" translatesAutoresizingMaskIntoConstraints="NO" id="ANm-M8-Xyo">
-                                <rect key="frame" x="55" y="120" width="300" height="280"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="4a5-4t-jWq" customClass="MyCustomSlider" customModule="AngerTracker" customModuleProvider="target">
-                                <rect key="frame" x="104" y="558" width="280" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.75764882564544678" green="0.084136910736560822" blue="0.11433085054159164" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="maximumTrackTintColor" red="1" green="0.63830449899999997" blue="0.27245380759999999" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
-                            </slider>
-                            <slider opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="0Vj-8n-q2I" customClass="MyCustomSlider" customModule="AngerTracker" customModuleProvider="target">
-                                <rect key="frame" x="104" y="720" width="280" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.75764882564544678" green="0.084136910736560822" blue="0.11433085054159164" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="maximumTrackTintColor" red="1" green="0.63830449899999997" blue="0.27245380759999999" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
-                            </slider>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sud-T1-d5E">
-                                <rect key="frame" x="162" y="750" width="90" height="90"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sud-T1-d5E">
+                                <rect key="frame" x="167" y="738" width="80" height="94"/>
                                 <state key="normal" image="Group">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -89,6 +115,19 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ANm-M8-Xyo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CuX-w2-mIV"/>
+                            <constraint firstAttribute="bottom" secondItem="fis-s9-DZg" secondAttribute="bottom" id="DwN-Qh-wnd"/>
+                            <constraint firstItem="fis-s9-DZg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Ioz-Fj-8ZT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Sud-T1-d5E" secondAttribute="bottom" constant="30" id="Kxg-SE-Xl6"/>
+                            <constraint firstItem="fis-s9-DZg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="RAe-Hu-RJe"/>
+                            <constraint firstItem="kZN-Sn-hct" firstAttribute="top" secondItem="ANm-M8-Xyo" secondAttribute="bottom" constant="65" id="SOs-3p-euy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kZN-Sn-hct" secondAttribute="trailing" constant="50" id="byV-6p-zZJ"/>
+                            <constraint firstItem="Sud-T1-d5E" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hE3-us-XSY"/>
+                            <constraint firstItem="fis-s9-DZg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qqH-rO-qCR"/>
+                            <constraint firstItem="kZN-Sn-hct" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="sXd-eB-7sz"/>
+                            <constraint firstItem="ANm-M8-Xyo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="zU6-uz-9DL"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="9Q7-lH-pNi"/>
@@ -100,11 +139,11 @@
                         <outlet property="sliderLevel5" destination="0Vj-8n-q2I" id="A4E-gz-98W"/>
                         <outlet property="sliderLevell2" destination="PtN-Nx-lkI" id="W5R-6y-TZg"/>
                         <outlet property="viewSK" destination="fis-s9-DZg" id="y0u-Ya-Kzs"/>
+                        <outletCollection property="emotionChart" destination="Yiz-Mw-D2r" collectionClass="NSMutableArray" id="ar4-ai-zlW"/>
                         <outletCollection property="emotionChart" destination="0Vj-8n-q2I" collectionClass="NSMutableArray" id="maG-1Q-d1E"/>
                         <outletCollection property="emotionChart" destination="PtN-Nx-lkI" collectionClass="NSMutableArray" id="6lx-vV-ygL"/>
-                        <outletCollection property="emotionChart" destination="Bh7-68-Ynl" collectionClass="NSMutableArray" id="3bq-ca-dft"/>
-                        <outletCollection property="emotionChart" destination="Yiz-Mw-D2r" collectionClass="NSMutableArray" id="ar4-ai-zlW"/>
                         <outletCollection property="emotionChart" destination="4a5-4t-jWq" collectionClass="NSMutableArray" id="AaA-Re-38I"/>
+                        <outletCollection property="emotionChart" destination="Bh7-68-Ynl" collectionClass="NSMutableArray" id="3bq-ca-dft"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -124,30 +163,23 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="EmojiLevel1" translatesAutoresizingMaskIntoConstraints="NO" id="s3p-wX-SR7">
-                                <rect key="frame" x="32" y="225" width="350" height="300"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EmojiLevel1" translatesAutoresizingMaskIntoConstraints="NO" id="s3p-wX-SR7">
+                                <rect key="frame" x="71" y="194" width="272" height="270"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="270" id="62R-4N-kqU"/>
+                                    <constraint firstAttribute="width" constant="272" id="mq4-aj-8jm"/>
+                                </constraints>
                             </imageView>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="OIj-Vy-Pdf" customClass="MyCustomSlider" customModule="AngerTracker" customModuleProvider="target">
-                                <rect key="frame" x="50" y="542" width="309" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="OIj-Vy-Pdf" customClass="MyCustomSlider2" customModule="AngerTracker" customModuleProvider="target">
+                                <rect key="frame" x="48" y="494" width="318" height="31"/>
                                 <color key="tintColor" red="0.75764882564544678" green="0.084136910736560822" blue="0.11433085054159164" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="maximumTrackTintColor" red="1" green="0.63830449899999997" blue="0.27245380759999999" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="sliderValueChange:" destination="g2W-mG-kiF" eventType="valueChanged" id="13E-Eu-kl9"/>
                                 </connections>
                             </slider>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="EmojiLevel1S" translatesAutoresizingMaskIntoConstraints="NO" id="ls6-Ci-3K4">
-                                <rect key="frame" x="30" y="580" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="EmojiLevel5S" translatesAutoresizingMaskIntoConstraints="NO" id="hQ5-hl-Rbj">
-                                <rect key="frame" x="350" y="580" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uxb-kJ-hM6">
-                                <rect key="frame" x="162" y="750" width="90" height="90"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uxb-kJ-hM6">
+                                <rect key="frame" x="167" y="738" width="80" height="94"/>
                                 <state key="normal" image="Group"/>
                                 <connections>
                                     <action selector="pushedSubmitEmotion:" destination="g2W-mG-kiF" eventType="touchUpInside" id="tDy-c8-y3F"/>
@@ -155,6 +187,15 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="OIj-Vy-Pdf" firstAttribute="top" secondItem="s3p-wX-SR7" secondAttribute="bottom" constant="30" id="4gK-SG-f6J"/>
+                            <constraint firstItem="O45-uq-wZH" firstAttribute="trailing" secondItem="OIj-Vy-Pdf" secondAttribute="trailing" constant="50" id="BRg-qX-sOh"/>
+                            <constraint firstItem="OIj-Vy-Pdf" firstAttribute="leading" secondItem="O45-uq-wZH" secondAttribute="leading" constant="50" id="CAN-n9-Scm"/>
+                            <constraint firstItem="O45-uq-wZH" firstAttribute="bottom" secondItem="uxb-kJ-hM6" secondAttribute="bottom" constant="30" id="Q2E-wG-mQL"/>
+                            <constraint firstItem="s3p-wX-SR7" firstAttribute="top" secondItem="O45-uq-wZH" secondAttribute="top" constant="150" id="pZk-DB-Tdm"/>
+                            <constraint firstItem="s3p-wX-SR7" firstAttribute="centerX" secondItem="t4Y-3U-TtL" secondAttribute="centerX" id="pgL-3N-bYC"/>
+                            <constraint firstItem="uxb-kJ-hM6" firstAttribute="centerX" secondItem="t4Y-3U-TtL" secondAttribute="centerX" id="sad-14-HRD"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="O45-uq-wZH"/>
                     </view>
                     <connections>

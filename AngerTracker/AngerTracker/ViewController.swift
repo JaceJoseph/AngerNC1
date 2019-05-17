@@ -71,7 +71,7 @@ class ViewController: UIViewController {
         case 21...40:
             mainEmotionImageIndicator.image = #imageLiteral(resourceName: "EmojiLevel2S")
         case 41...60:
-            mainEmotionImageIndicator.image = #imageLiteral(resourceName: "EmojiLevel3S")
+            mainEmotionImageIndicator.image = #imageLiteral(resourceName: "EmojiLevel3")
         case 61...80:
             mainEmotionImageIndicator.image = #imageLiteral(resourceName: "EmojiLevel4")
         case 81...100:
