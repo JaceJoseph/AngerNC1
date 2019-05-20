@@ -90,9 +90,9 @@
 				70A77078228A9CFC00A08A99 /* Main.storyboard */,
 				70A770F0228C272200A08A99 /* Datas */,
 				70A770EF228C271200A08A99 /* Add Record */,
+				70A770EE228C26CB00A08A99 /* Records Screen */,
 				70A770ED228C26AC00A08A99 /* UI Subclasses */,
 				70A770EC228C26A000A08A99 /* SKS Files */,
-				70A770EE228C26CB00A08A99 /* Records Screen */,
 			);
 			path = AngerTracker;
 			sourceTree = "<group>";

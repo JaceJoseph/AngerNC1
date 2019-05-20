@@ -11,7 +11,14 @@ import UIKit
 class AngerRecordCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var emojiImage: UIImageView!
-    func setCell(image:UIImage){
+    @IBOutlet weak var emotionSliderValue: UISlider!
+    
+    override func awakeFromNib() {
+        backgroundColor = .clear
+    }
+    
+    func setCell(image:UIImage,sliderValue:Int){
         emojiImage.image = image
+        emotionSliderValue.setValue(Float(sliderValue), animated: true)
     }
 }

@@ -35,6 +35,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .lightContent
+    }
+    
     @IBAction func pushedAddEmotionRecord(_ sender: UIButton) {
         let destVC = storyboard?.instantiateViewController(withIdentifier: "AddEmotionRecord") as! AddEmotionRecordViewController
         
@@ -69,7 +73,7 @@ class ViewController: UIViewController {
         case 0...20:
             mainEmotionImageIndicator.image = #imageLiteral(resourceName: "EmojiLevel1")
         case 21...40:
-            mainEmotionImageIndicator.image = #imageLiteral(resourceName: "EmojiLevel2S")
+            mainEmotionImageIndicator.image = #imageLiteral(resourceName: "EmojiLevel2")
         case 41...60:
             mainEmotionImageIndicator.image = #imageLiteral(resourceName: "EmojiLevel3")
         case 61...80:

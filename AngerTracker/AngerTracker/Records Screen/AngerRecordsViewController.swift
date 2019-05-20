@@ -15,6 +15,7 @@ class AngerRecordsViewController: UIViewController {
     let appendKey = Notification.Name(appendEmotionDataKey)
 
     @IBOutlet weak var emotionCollectionView: UICollectionView!
+    @IBOutlet weak var particleView: Particle_View!
     
     var emotionRecords = [UserEmotionData]()
     
@@ -25,6 +26,10 @@ class AngerRecordsViewController: UIViewController {
         emotionCollectionView.delegate = self
         emotionCollectionView.dataSource = self
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        particleView.setupView(value: meanData)
     }
     
     func createObserver(){
@@ -45,10 +50,10 @@ extension AngerRecordsViewController:UICollectionViewDelegate,UICollectionViewDa
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let row = emotionRecords[indexPath.row].emotionImage
+        let row = emotionRecords[indexPath.row]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "emotionCell", for: indexPath) as! AngerRecordCollectionViewCell
         
-        cell.setCell(image: row)
+        cell.setCell(image: row.emotionImage,sliderValue: row.value)
         
         return cell
     }

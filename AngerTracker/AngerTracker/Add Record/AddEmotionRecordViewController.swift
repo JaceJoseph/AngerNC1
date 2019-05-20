@@ -27,6 +27,10 @@ class AddEmotionRecordViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .lightContent
+    }
+    
     @IBAction func pushedSubmitEmotion(_ sender: UIButton) {
         let desiredValue = Int(emotionValue.value)
         let desiredImage = emotionImage.image
@@ -41,7 +45,11 @@ class AddEmotionRecordViewController: UIViewController {
     }
     
     @IBAction func sliderValueChange(_ sender: UISlider) {
-        switch sender.value {
+        
+        let fixedValue = round(sender.value/20)*20
+        sender.setValue(fixedValue, animated: true)
+        
+        switch fixedValue{
         case 0...20:
             emotionImage.image = #imageLiteral(resourceName: "EmojiLevel1")
         case 21...40:

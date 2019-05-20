@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SQP-AK-7xW">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Journal-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AngerTracker" customModuleProvider="target" sceneMemberID="viewController">
@@ -105,7 +105,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sud-T1-d5E">
-                                <rect key="frame" x="167" y="738" width="80" height="94"/>
+                                <rect key="frame" x="167" y="689" width="80" height="94"/>
                                 <state key="normal" image="Group">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -130,7 +130,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="9Q7-lH-pNi"/>
+                    <tabBarItem key="tabBarItem" title="Journal" image="JournalIcon" selectedImage="JournalIcon" id="9Q7-lH-pNi"/>
                     <connections>
                         <outlet property="mainEmotionImageIndicator" destination="ANm-M8-Xyo" id="Mf6-3c-e1n"/>
                         <outlet property="sliderLevel1" destination="Bh7-68-Ynl" id="O8n-rt-1kw"/>
@@ -148,7 +148,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="852.17391304347836" y="117.85714285714285"/>
+            <point key="canvasLocation" x="1762.3188405797102" y="117.85714285714285"/>
         </scene>
         <!--Add Emotion Record View Controller-->
         <scene sceneID="WI5-Ae-582">
@@ -170,7 +170,7 @@
                                     <constraint firstAttribute="width" constant="272" id="mq4-aj-8jm"/>
                                 </constraints>
                             </imageView>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="OIj-Vy-Pdf" customClass="MyCustomSlider2" customModule="AngerTracker" customModuleProvider="target">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="20" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="OIj-Vy-Pdf" customClass="MyCustomSlider2" customModule="AngerTracker" customModuleProvider="target">
                                 <rect key="frame" x="48" y="494" width="318" height="31"/>
                                 <color key="tintColor" red="0.75764882564544678" green="0.084136910736560822" blue="0.11433085054159164" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="maximumTrackTintColor" red="1" green="0.63830449899999997" blue="0.27245380759999999" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
@@ -206,9 +206,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Smm-u4-sFi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1760.8695652173915" y="117.85714285714285"/>
+            <point key="canvasLocation" x="2671.0144927536235" y="117.85714285714285"/>
         </scene>
-        <!--Item-->
+        <!--Anger Records View Controller-->
         <scene sceneID="C19-54-Nuz">
             <objects>
                 <viewController id="3dd-Mt-NNj" customClass="AngerRecordsViewController" customModule="AngerTracker" customModuleProvider="target" sceneMemberID="viewController">
@@ -216,31 +216,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D67-OS-1so" customClass="Particle_View" customModule="AngerTracker" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ftj-OJ-7Wx">
-                                <rect key="frame" x="20" y="72" width="374" height="720"/>
+                                <rect key="frame" x="20" y="44" width="374" height="740"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bhK-Bg-Sa9">
-                                    <size key="itemSize" width="171" height="171"/>
+                                    <size key="itemSize" width="171" height="198"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="emotionCell" id="D3E-OY-Y6R" customClass="AngerRecordCollectionViewCell" customModule="AngerTracker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="171" height="171"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="171" height="198"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="171" height="171"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="171" height="198"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PBw-Be-C0N">
                                                     <rect key="frame" x="20" y="20" width="131" height="128"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
+                                                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="bQG-dK-LeV" customClass="MyCustomSlider" customModule="AngerTracker" customModuleProvider="target">
+                                                    <rect key="frame" x="18" y="158" width="135" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="tintColor" red="0.75764882564544678" green="0.084136910736560822" blue="0.11433085054159164" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="minimumTrackTintColor" red="1" green="0.63830449899999997" blue="0.27245380759999999" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </slider>
                                             </subviews>
                                         </view>
                                         <connections>
                                             <outlet property="emojiImage" destination="PBw-Be-C0N" id="JDj-Eh-Yen"/>
+                                            <outlet property="emotionSliderValue" destination="bQG-dK-LeV" id="yKb-rw-PBF"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -249,14 +261,37 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="dbS-ik-gpc"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="WbT-K2-cTL"/>
+                    <tabBarItem key="tabBarItem" systemItem="history" id="WbT-K2-cTL"/>
                     <connections>
                         <outlet property="emotionCollectionView" destination="ftj-OJ-7Wx" id="L57-1j-eWj"/>
+                        <outlet property="particleView" destination="D67-OS-1so" id="fTv-gB-Bq1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wR2-YW-TFt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="850.72463768115949" y="831.69642857142856"/>
+            <point key="canvasLocation" x="1760.8695652173915" y="831.69642857142856"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Q8T-XU-F3P">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="SQP-AK-7xW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="g2d-Qe-s8K">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.74577138956310685" green="0.052569474179180883" blue="0.075537648067476648" alpha="0.38986895161290325" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="FlH-x7-cNg"/>
+                        <segue destination="3dd-Mt-NNj" kind="relationship" relationship="viewControllers" id="SUT-z0-ppO"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="msR-pV-VDS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="850.72463768115949" y="474.77678571428567"/>
         </scene>
     </scenes>
     <resources>
@@ -267,5 +302,6 @@
         <image name="EmojiLevel4S" width="50" height="68"/>
         <image name="EmojiLevel5S" width="51" height="76"/>
         <image name="Group" width="80" height="94"/>
+        <image name="JournalIcon" width="20" height="16"/>
     </resources>
 </document>
