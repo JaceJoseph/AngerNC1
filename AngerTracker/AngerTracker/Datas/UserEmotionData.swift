@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-struct UserEmotionData{
+struct UserEmotionData {
     var emotionImage:UIImage
     var value:Int
 }

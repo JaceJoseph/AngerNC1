@@ -17,7 +17,6 @@ class AddEmotionRecordViewController: UIViewController {
     var submitEmotionDelegate:submitEmotion!
 
     @IBOutlet weak var particleView: Particle_View!
-    
     @IBOutlet weak var emotionValue: UISlider!
     @IBOutlet weak var emotionImage: UIImageView!
     
